@@ -1,0 +1,19 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin: 0 0 70px; /* bottom = footer height */
+}
+.my-footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 70px;
+    width: 100%;
+    background-color: gray;
+}
+.my-image {
+    height: 200px;
+    align-content: center;
+}

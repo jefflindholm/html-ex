@@ -1,0 +1,116 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>HTML Basic Setup</title>
+    <meta name="description" content="HTML Basic setup">
+    <meta name="author" content="Author Name">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <section class="section">
+        <nav class="nav">
+            <div class="nav-left">
+                <a class="nav-item">
+                <img src="http://bulma.io/images/bulma-logo.png" alt="Bulma logo">
+                </a>
+            </div>
+
+            <div class="nav-center">
+                <a class="nav-item">
+                    Welcome to my store
+                </a>
+            </div>
+
+            <div class="nav-item">
+                <div class="field is-grouped">
+                    <p class="control">
+                        <input type="text" placeholder="search" />
+                        <span class="icon">
+                            <a id="search">
+                                <i class="fa fa-search"></i>
+                            </a>
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        </nav>
+        <hr>
+    </section>
+    <section class="section">
+        <div class="columns">
+            <div class="column is-one-quarter">
+                <aside class="menu">
+                    <p class="menu-label">
+                        Select an Item
+                    </p>
+                    <ul class="menu-list">
+                        <li><a id="item1-button">Item 1</a></li>
+                        <li><a id="item2-button">Item 2</a></li>
+                    </ul>
+                </aside>
+            </div>
+            <div class="column">
+                <div id="item1-detail" class="card">
+                    <div class="card-image">
+                        <img src="images/th.jpg" alt="Image">
+                    </div>
+                    <div class="card-content">
+                        <div class="content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Phasellus nec iaculis mauris.
+                        </div>
+                    </div>
+                </div>
+                <div id="item2-detail" class="card" style="display:none;">
+                    <div class="card-image">
+                        <img src="images/th2.jpg" alt="Image">
+                    </div>
+                    <div class="card-content">
+                        <div class="content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Phasellus nec iaculis mauris.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="my-footer">
+        <div class="container">
+            <div class="content has-text-centered">
+                <p>
+                    Footer text goes here
+                    <a class="icon" href="https://github.com/jgthms/bulma">
+                        <i class="fa fa-github"></i>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    $(document).ready(function() {
+        $('#item1-button').click(function() {
+            console.log('item1-clicked')
+            $('#item1-detail').show();
+            $('#item2-detail').hide();
+        })
+        $('#item2-button').click(function() {
+            console.log('item2-clicked')
+            $('#item2-detail').show();
+            $('#item1-detail').hide();
+        })
+    })
+</script>
+</html>
